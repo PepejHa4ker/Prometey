@@ -1,0 +1,11 @@
+/target
+/Cargo.lock
+*.iml
+/.idea
+/crates/dll-build/target
+/crates/ui/target
+/crates/shared/target
+*.lock
+*.exe
+*.dll
+

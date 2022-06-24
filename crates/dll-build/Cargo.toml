@@ -1,0 +1,70 @@
+[package]
+name = "dll-build"
+version = "0.1.0"
+edition = "2021"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies.ui]
+path = "../ui"
+
+[dependencies.shared]
+path = "../shared"
+
+[dependencies.log]
+version = "0.4.16"
+
+[dependencies.log-panics]
+version = "2.0.0"
+[dependencies.winapi]
+version = "0.3.9"
+features = ["std", "ntdef", "windef", "minwindef", "winnt", "winuser", "consoleapi", "libloaderapi", "processthreadsapi", "d3d9", "memoryapi", "impl-default"]
+[dependencies.windows]
+version = "0.36"
+features = [
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_Graphics_Dxgi_Common",
+    "Win32_Graphics_Direct3D11",
+    "Win32_Graphics_Dxgi",
+    "Win32_Foundation"
+]
+
+[dependencies.backtrace]
+git = "https://github.com/Radviger/backtrace-rs"
+features = ["cpp_demangle"]
+
+[dependencies.wio]
+version = "0.2.2"
+
+[dependencies.fern]
+version = "0.6.1"
+features = ["colored"]
+
+[dependencies.colored]
+version = "2.0.0"
+
+[dependencies.chrono]
+version = "0.4.19"
+
+[dependencies.ansi_term]
+version = "0.12.1"
+
+[dependencies.sunshine]
+git = "https://github.com/sy1ntexx/sunshine"
+
+[dependencies.detour]
+version = "0.8.1"
+
+[dependencies]
+faithe = "0.3.1"
+egui = "0.18.1"
+libc = "0.2.112"
+image = { version = "0.24", features = ["jpeg"] }
+
+[dependencies.egui_extras]
+version = "0.18"
+features = ["image"]
+[dependencies.egui-d3d11]
+version = "0.7.3"
+features = ["force-compile", "save-blob"]
